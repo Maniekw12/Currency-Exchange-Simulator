@@ -126,37 +126,6 @@ def game(user1: user.User):
             currency_to_buy = input("Currency name: ").strip().upper()
             user1.show_values_from_latest_days(currency_to_buy, 100)
 
-        elif action == "get stock":
-            dupa = user.Stock("APP")
-            print(dupa.price)
-
-        elif action == "buy stocks":
-            print("=" * 30)
-            currency_to_buy = input("Currency name: ").strip().upper()
-            while True:
-                try:
-                    amount = float(input("Amount: "))
-                    if amount <= 0:
-                        print("Amount must be greater than zero. Please try again.")
-                        continue
-                    user1.buy_stock(currency_to_buy, amount)
-                    break
-                except ValueError:
-                    print("Invalid amount. Please enter a valid number.")
-
-        elif action == "ss":
-            print("=" * 30)
-            currency_to_sell = input(" name: ").strip().upper()
-            while True:
-                try:
-                    amount = float(input("Amount: "))
-                    if amount <= 0:
-                        print("Amount must be greater than zero. Please try again.")
-                        continue
-                    user1.sell_stock(currency_to_sell, amount)
-                    break
-                except ValueError:
-                    print("Invalid amount. Please enter a valid number.")
 
 
 
